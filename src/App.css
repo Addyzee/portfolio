@@ -5,21 +5,30 @@
 h2{
   @apply text-2xl pb-5 font-bold;
 }
+h3{
+  @apply text-xl pb-5;
+}
 
 /* SideNav */
 .side-nav {
-  @apply border-r-2 border-black h-screen bg-mainBg flex flex-col p-4 list-none justify-center;
+  @apply border-r-2 border-black h-screen bg-mainBg flex flex-col p-4 list-none justify-center min-w-[18%];
 }
 .side-nav-content{
-  @apply h-[80%];
+  @apply h-[80%] flex-col max-w-[90%];
 }
 
-/* Main sectino */
+/* Main section */
 .main-section{
-  @apply h-screen 
+  @apply h-screen w-[100%] pl-10 pr-10 pt-5 pb-5; 
+}
+.main-content{
+  @apply border h-[80%];
 }
 
 /* HeaderNav */
 .header-nav-container{
   @apply h-[15%] flex-grow-0;
+}
+.header-nav-el{
+  @apply w-3 hover:font-bold;
 }

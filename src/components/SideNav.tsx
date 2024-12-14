@@ -15,6 +15,11 @@ const SideNav = () => {
     };
     fetchRepos();
   }, []);
+  const selectRepo = (repoURL: string) : void=> {
+    const newWindow = window.open(repoURL, "_blank", "noopener,noreferrer");
+    if (newWindow) newWindow.opener = null;
+  };
+  const onClickRepo = (url : string): (() => void) => () => selectRepo(url)
 
   return (
     <div className="side-nav">
@@ -23,7 +28,9 @@ const SideNav = () => {
         {repos.length != 0 ? (
           repos.map((repo, index) => (
             <li key={index}>
-              <button>{repo.name}</button>
+              <button className="text-left hover:font-bold text-sm" onClick={onClickRepo(repo.html_url)}>
+                {repo.name}
+              </button>
             </li>
           ))
         ) : (
