@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
 import GitHubRepo from "../resources/Interfaces";
-import getRepos from "../resources/GitHubInfo";
+import {getRepos} from "../resources/GitHubInfo";
 
-const SideNav = () => {
+interface NavProps{
+  changeNav:  (name : string) => void
+}
+
+
+const SideNav = ({changeNav}:NavProps) => {
   const [repos, setRepos] = useState<GitHubRepo[]>([]);
   useEffect(() => {
     const fetchRepos = async () => {
@@ -15,25 +20,24 @@ const SideNav = () => {
     };
     fetchRepos();
   }, []);
-  const selectRepo = (repoURL: string) : void=> {
-    const newWindow = window.open(repoURL, "_blank", "noopener,noreferrer");
-    if (newWindow) newWindow.opener = null;
-  };
-  const onClickRepo = (url : string): (() => void) => () => selectRepo(url)
+ 
+  const onClickRepo = (name : string): (() => void) => () => changeNav(name)
 
   return (
     <div className="side-nav">
       <div className="side-nav-content">
         <h2>Projects</h2>
         {repos.length != 0 ? (
-          repos.map((repo, index) => (
+          <ul>
+          {repos.map((repo, index) => (
             <li key={index}>
-              <button className="text-left hover:font-bold text-sm" onClick={onClickRepo(repo.html_url)}>
+              <button className="text-left hover:font-bold text-sm" onClick={onClickRepo(repo.name)}>
                 {repo.name}
               </button>
             </li>
-          ))
-        ) : (
+          ))}
+          </ul>
+          ) : (
           <p>Loading...</p>
         )}
       </div>

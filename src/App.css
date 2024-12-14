@@ -1,6 +1,6 @@
 /* General/Across App */
 .app{
-  @apply font-primary
+  @apply font-primary ;
 }
 h2{
   @apply text-2xl pb-5 font-bold;
@@ -11,7 +11,7 @@ h3{
 
 /* SideNav */
 .side-nav {
-  @apply border-r-2 border-black h-screen bg-mainBg flex flex-col p-4 list-none justify-center min-w-[18%];
+  @apply border-r-2 border-black h-screen bg-mainBg flex flex-col p-4 list-none justify-center min-w-[20%] max-w-[20%];
 }
 .side-nav-content{
   @apply h-[80%] flex-col max-w-[90%];
@@ -19,15 +19,15 @@ h3{
 
 /* Main section */
 .main-section{
-  @apply h-screen w-[100%] pl-10 pr-10 pt-5 pb-5; 
+  @apply h-screen w-[80%] pl-10 pr-10 pt-5 pb-5 ; 
 }
 .main-content{
-  @apply border h-[80%];
+  @apply border h-[90%] max-h-[90%] overflow-y-scroll w-[100%] overflow-x-hidden;
 }
 
 /* HeaderNav */
 .header-nav-container{
-  @apply h-[15%] flex-grow-0;
+  @apply h-[10%] flex-grow-0;
 }
 .header-nav-el{
   @apply w-3 hover:font-bold;
