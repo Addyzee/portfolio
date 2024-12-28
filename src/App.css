@@ -2,8 +2,11 @@
 .app{
   @apply font-primary ;
 }
-h2{
+h1{
   @apply text-2xl pb-5 font-bold;
+}
+h2{
+  @apply text-xl pb-5 font-bold;
 }
 h3{
   @apply text-xl pb-5;

@@ -9,7 +9,7 @@ export default {
         secondaryBg: "#D9D9D9",
       },
       fontFamily: {
-        primary: ["Verdana", "sans-serif"],
+        primary: ["Trebuchet MS", "sans-serif"],
         code: ["monospace", "sans-serif"],
       },
     },
