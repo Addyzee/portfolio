@@ -5,8 +5,9 @@ const rawBaseURL = `https://raw.githubusercontent.com/Addyzee`;
 const apiURL = `https://api.github.com/users/addyzee/repos`;
 const branchURL = `refs/heads/master`;
 
+
 export const getRepos = async (): Promise<GitHubRepo[]> => {
-  const reposToInclude = ["spectf-dt", "romanian-travel", "0X"];
+  const reposToInclude = ["campus-network"];
 
   try {
     const response = await axios.get<GitHubRepo[]>(`${apiURL}`);
@@ -21,7 +22,8 @@ export const getRepos = async (): Promise<GitHubRepo[]> => {
 };
 
 export const getREADME = async (repo: string): Promise<string> => {
-  const url = `${rawBaseURL}/${repo}/${branchURL}/README.md`;
+  const docsLocation = `${rawBaseURL}/${repo}/${branchURL}/PROJECT/DOCS`;
+  const url = `${docsLocation}/README.md`;
   try {
     const response = await axios.get<string>(url);
     const markdown = handleLinks(response.data, repo);
@@ -33,8 +35,25 @@ export const getREADME = async (repo: string): Promise<string> => {
 };
 
 const handleLinks = (markdown: string, repo: string) => {
-  const newMarkdown = markdown
-    .replace(/\]\(/g, `](${rawBaseURL}/${repo}/${branchURL}/`)
-    .replace(/<br>/g, "");
+  const docsLocation = `${rawBaseURL}/${repo}/${branchURL}/PROJECT/DOCS`;
+  let newMarkdown = markdown;
+  // Modify local links to point to the repository
+  newMarkdown = newMarkdown
+    .replace(
+      /\]\((?!http)([^)]+)\)/g, // Matches links that don't start with 'http'
+      `](${docsLocation}/$1)`
+    )
+    .replace(/<br>/g, "")
+    // Modify YouTube links to embed the video
+    .replace(
+      /\[([^[]+)\]\(https:\/\/youtu.be\/([^)]+)\)/g, 
+      `<div>
+        <h3>$1</h3>
+        <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/$2"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+      </div>`
+    );
   return newMarkdown;
 };

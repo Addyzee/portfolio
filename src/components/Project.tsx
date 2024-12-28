@@ -1,4 +1,4 @@
-import Markdown from "react-markdown";
+import Markdown from "markdown-to-jsx";
 import { getREADME } from "../resources/GitHubInfo";
 import { useEffect, useState } from "react";
 
