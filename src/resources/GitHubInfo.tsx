@@ -5,10 +5,10 @@ const rawBaseURL = `https://raw.githubusercontent.com/Addyzee`;
 const apiURL = `https://api.github.com/users/addyzee/repos`;
 const branchURL = `refs/heads/master`;
 const docsLocation = `PROJECT/DOCS`;
+const reposToInclude = ["campus-network", "risk-awareness-streamlit"];
 
 
 export const getRepos = async (): Promise<GitHubRepo[]> => {
-  const reposToInclude = ["campus-network"];
 
   try {
     const response = await axios.get<GitHubRepo[]>(`${apiURL}`);
