@@ -36,7 +36,7 @@ export const getREADME = async (repo: string): Promise<string> => {
 };
 
 const handleLinks = (markdown: string, repo: string) => {
-  const docsURL = `${rawBaseURL}/${repo}/${branchURL}/${docsLocation}`;
+  const docsURL = `${rawBaseURL}/${repo}/${branchURL}`;
   let newMarkdown = markdown;
   // Modify local links to point to the repository
   newMarkdown = newMarkdown
