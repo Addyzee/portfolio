@@ -3,13 +3,26 @@
   @apply font-primary ;
 }
 h1{
-  @apply text-2xl pb-5 font-bold;
+  @apply text-3xl pb-2 font-bold;
 }
+
 h2{
-  @apply text-xl pb-5 font-bold;
+  @apply text-2xl font-bold pt-5 pb-0;
 }
+
 h3{
-  @apply text-xl pb-5;
+  @apply text-xl ;
+}
+h3 + p{
+  @apply pb-2 ;
+}
+
+/*For markdown*/
+img{
+  @apply border-2
+}
+blockquote{
+  @apply bg-slate-300
 }
 
 /* SideNav */
@@ -25,7 +38,7 @@ h3{
   @apply h-screen w-[80%] pl-10 pr-10 pt-5 pb-5 ; 
 }
 .main-content{
-  @apply h-[90%] max-h-[90%] overflow-y-scroll w-[100%] overflow-x-hidden;
+  @apply h-[90%] max-h-[90%] overflow-y-scroll w-[100%] overflow-x-hidden p-2;
 }
 
 /* HeaderNav */
@@ -35,3 +48,14 @@ h3{
 .header-nav-el{
   @apply w-3 hover:font-bold;
 }
+
+/*About*/
+/*Thumbnails*/
+.thumbnail {
+  @apply flex flex-col items-center justify-center p-1 hover:bg-gray-200 cursor-pointer rounded-full border-0;
+}
+
+.thumbnail-icon {
+  @apply w-[50px] h-[50px] p-2 rounded-full object-contain;
+}
+

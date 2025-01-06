@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "fetch-repo-info": "node scripts/fetchRepoInfo.js",
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npm run fetch-repo-info &&  tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

@@ -1,0 +1,160 @@
+[
+  {
+    "project_name": "Networking Infrastructure Design for Koitalel arap Samoei University College",
+    "year": 2024,
+    "status": "Complete",
+    "keywords": [
+      "Network Design",
+      "LAN",
+      "WAN",
+      "University Networking",
+      "Routing Protocols",
+      "IP Addressing"
+    ],
+    "languages/tools": [
+      "Cisco Packet Tracer"
+    ],
+    "contributors": [
+      "Me",
+      "Purity",
+      "Sade",
+      "Millicent",
+      "Don"
+    ],
+    "repo": "campus-network"
+  },
+  {
+    "project_name": "Risk Awareness Infogram",
+    "keywords": [
+      "data visualization",
+      "web apps",
+      "COVID-19 risk awareness",
+      "interactive dashboards"
+    ],
+    "languages/tools": [
+      "Python",
+      "pandas",
+      "streamlit",
+      "numpy"
+    ],
+    "year": 2024,
+    "status": "completed",
+    "contributors": [
+      "Me"
+    ],
+    "repo": "risk-awareness-streamlit"
+  },
+  {
+    "project_name": "Romanian Cities Pathfinding Using DFS",
+    "year": 2024,
+    "status": "Complete",
+    "keywords": [
+      "Graph Traversal",
+      "Depth-First Search",
+      "Pathfinding",
+      "Algorithm Design"
+    ],
+    "languages/tools": [
+      "Python"
+    ],
+    "contributors": [
+      "Me"
+    ],
+    "repo": "romanian-travel"
+  },
+  {
+    "project_name": "Certificate and Product Scraper EccoVerde",
+    "year": 2024,
+    "status": "Complete",
+    "keywords": [
+      "Web Scraping",
+      "Eco-friendly Products",
+      "Crawlers/Spiders"
+    ],
+    "languages/tools": [
+      "Python",
+      "Scrapy"
+    ],
+    "contributors": [
+      "Me"
+    ],
+    "repo": "ecoverde-scrape"
+  },
+  {
+    "project_name": "TicTacToe Tkinter",
+    "year": 2024,
+    "status": "Complete",
+    "keywords": [
+      "TicTacToe",
+      "Tkinter",
+      "GUI Application",
+      "Python",
+      "Game Development",
+      "Event-driven Programming"
+    ],
+    "languages/tools": [
+      "Python",
+      "Tkinter"
+    ],
+    "contributors": [
+      "Me"
+    ],
+    "repo": "0X"
+  },
+  {
+    "project_name": "SPECTF Heart Dataset Analysis Documentation",
+    "year": 2024,
+    "status": "Complete",
+    "keywords": [
+      "Machine Learning",
+      "Decision Trees",
+      "Cross Validation",
+      "Medical Diagnosis",
+      "SPECT Imaging",
+      "Heart Disease",
+      "Classification",
+      "Model Evaluation",
+      "Learning Curves",
+      "Hyperparameter Optimization"
+    ],
+    "languages/tools": [
+      "Python",
+      "pandas",
+      "numpy",
+      "scikit-learn",
+      "matplotlib",
+      "seaborn",
+      "Jupyter Notebook"
+    ],
+    "contributors": [
+      "Me"
+    ],
+    "repo": "spectf-dt"
+  },
+  {
+    "project_name": "Measuring General Intelligence: Learnability vs Cognitive Skills Study",
+    "year": 2023,
+    "status": "Complete",
+    "keywords": [
+      "Cognitive Skills",
+      "Learnability",
+      "Educational Assessment",
+      "Learning Analytics",
+      "IQ Testing",
+      "Educational Technology"
+    ],
+    "languages/tools": [
+      "Python",
+      "R",
+      "Item Response Theory",
+      "Linear Regression",
+      "Multiple Regression Analysis"
+    ],
+    "contributors": [
+      "Abhilash Mishra",
+      "Andrew Kimani",
+      "Essosolim Apollinaire Abi"
+    ],
+    "repo": "CogSkills-SelfLearn"
+  }
+]

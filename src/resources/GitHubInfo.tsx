@@ -1,15 +1,22 @@
 import axios from "axios";
-import GitHubRepo from "./Interfaces";
+import { GitHubRepo } from "./Interfaces";
+import reposInfo from "./reposInfo.json";
 
 const rawBaseURL = `https://raw.githubusercontent.com/Addyzee`;
 const apiURL = `https://api.github.com/users/addyzee/repos`;
 const branchURL = `refs/heads/master`;
 const docsLocation = `PROJECT/DOCS`;
-const reposToInclude = ["campus-network", "risk-awareness-streamlit", "romanian-travel", "ecoverde-scrape", "0X", "spectf-dt", "CogSkills-SelfLearn"];
-
+const reposToInclude = [
+  "campus-network",
+  "risk-awareness-streamlit",
+  "romanian-travel",
+  "ecoverde-scrape",
+  "0X",
+  "spectf-dt",
+  "CogSkills-SelfLearn",
+];
 
 export const getRepos = async (): Promise<GitHubRepo[]> => {
-
   try {
     const response = await axios.get<GitHubRepo[]>(`${apiURL}`);
     let repos = response.data;
@@ -35,6 +42,10 @@ export const getREADME = async (repo: string): Promise<string> => {
   }
 };
 
+export const getInfoJSON = async() => {
+  console.log(reposInfo);
+};
+
 const handleLinks = (markdown: string, repo: string) => {
   const docsURL = `${rawBaseURL}/${repo}/${branchURL}`;
   let newMarkdown = markdown;
@@ -46,16 +57,18 @@ const handleLinks = (markdown: string, repo: string) => {
     )
     // Modify YouTube links to embed the video
     .replace(
-      /\[([^[]+)\]\(https:\/\/youtu.be\/([^)]+)\)/g, 
-      `<div>
+      /\[([^[]+)\]\(https:\/\/youtu.be\/([^)]+)\)/g,
+      `<div className="w-full pt-1">
         <h2>$1</h2>
-        <iframe width="560" height="315"
-          src="https://www.youtube.com/embed/$2"
-          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        </iframe>
+        <div className="border h-[150%]">
+          <iframe width="560" height="500"
+            src="https://www.youtube.com/embed/$2"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen className="w-full">
+          </iframe>
+        </div>
       </div>`
     )
     // Further formatting
-    .replace('---','<br>')
+    .replace("---", "<br>");
   return newMarkdown;
 };

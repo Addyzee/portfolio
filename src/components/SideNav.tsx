@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import GitHubRepo from "../resources/Interfaces";
+import { GitHubRepo } from "../resources/Interfaces";
 import {getRepos} from "../resources/GitHubInfo";
 
 interface NavProps{
