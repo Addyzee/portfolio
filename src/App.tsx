@@ -9,7 +9,7 @@ function App() {
   const [currentState, setCurrentState] = useState<string>("Home")
   const changeState = (name: string) =>{
     setCurrentState(name)
-    
+
   }
 
   return (

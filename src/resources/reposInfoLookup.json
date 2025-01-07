@@ -1,0 +1,232 @@
+{
+  "year": {
+    "2023": [
+      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+    ],
+    "2024": [
+      "Networking Infrastructure Design for Koitalel arap Samoei University College",
+      "Risk Awareness Infogram",
+      "Romanian Cities Pathfinding Using DFS",
+      "Certificate and Product Scraper EccoVerde",
+      "TicTacToe Tkinter",
+      "SPECTF Heart Dataset Analysis Documentation"
+    ]
+  },
+  "status": {
+    "Complete": [
+      "Networking Infrastructure Design for Koitalel arap Samoei University College",
+      "Romanian Cities Pathfinding Using DFS",
+      "Certificate and Product Scraper EccoVerde",
+      "TicTacToe Tkinter",
+      "SPECTF Heart Dataset Analysis Documentation",
+      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+    ],
+    "completed": [
+      "Risk Awareness Infogram"
+    ]
+  },
+  "keywords": {
+    "Network Design": [
+      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+    ],
+    "LAN": [
+      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+    ],
+    "WAN": [
+      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+    ],
+    "University Networking": [
+      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+    ],
+    "Routing Protocols": [
+      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+    ],
+    "IP Addressing": [
+      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+    ],
+    "data visualization": [
+      "Risk Awareness Infogram"
+    ],
+    "web apps": [
+      "Risk Awareness Infogram"
+    ],
+    "COVID-19 risk awareness": [
+      "Risk Awareness Infogram"
+    ],
+    "interactive dashboards": [
+      "Risk Awareness Infogram"
+    ],
+    "Graph Traversal": [
+      "Romanian Cities Pathfinding Using DFS"
+    ],
+    "Depth-First Search": [
+      "Romanian Cities Pathfinding Using DFS"
+    ],
+    "Pathfinding": [
+      "Romanian Cities Pathfinding Using DFS"
+    ],
+    "Algorithm Design": [
+      "Romanian Cities Pathfinding Using DFS"
+    ],
+    "Web Scraping": [
+      "Certificate and Product Scraper EccoVerde"
+    ],
+    "Eco-friendly Products": [
+      "Certificate and Product Scraper EccoVerde"
+    ],
+    "Crawlers/Spiders": [
+      "Certificate and Product Scraper EccoVerde"
+    ],
+    "TicTacToe": [
+      "TicTacToe Tkinter"
+    ],
+    "Tkinter": [
+      "TicTacToe Tkinter"
+    ],
+    "GUI Application": [
+      "TicTacToe Tkinter"
+    ],
+    "Python": [
+      "TicTacToe Tkinter"
+    ],
+    "Game Development": [
+      "TicTacToe Tkinter"
+    ],
+    "Event-driven Programming": [
+      "TicTacToe Tkinter"
+    ],
+    "Machine Learning": [
+      "SPECTF Heart Dataset Analysis Documentation"
+    ],
+    "Decision Trees": [
+      "SPECTF Heart Dataset Analysis Documentation"
+    ],
+    "Cross Validation": [
+      "SPECTF Heart Dataset Analysis Documentation"
+    ],
+    "Medical Diagnosis": [
+      "SPECTF Heart Dataset Analysis Documentation"
+    ],
+    "SPECT Imaging": [
+      "SPECTF Heart Dataset Analysis Documentation"
+    ],
+    "Heart Disease": [
+      "SPECTF Heart Dataset Analysis Documentation"
+    ],
+    "Classification": [
+      "SPECTF Heart Dataset Analysis Documentation"
+    ],
+    "Model Evaluation": [
+      "SPECTF Heart Dataset Analysis Documentation"
+    ],
+    "Learning Curves": [
+      "SPECTF Heart Dataset Analysis Documentation"
+    ],
+    "Hyperparameter Optimization": [
+      "SPECTF Heart Dataset Analysis Documentation"
+    ],
+    "Cognitive Skills": [
+      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+    ],
+    "Learnability": [
+      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+    ],
+    "Educational Assessment": [
+      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+    ],
+    "Learning Analytics": [
+      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+    ],
+    "IQ Testing": [
+      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+    ],
+    "Educational Technology": [
+      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+    ]
+  },
+  "languages/tools": {
+    "Cisco Packet Tracer": [
+      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+    ],
+    "Python": [
+      "Risk Awareness Infogram",
+      "Romanian Cities Pathfinding Using DFS",
+      "Certificate and Product Scraper EccoVerde",
+      "TicTacToe Tkinter",
+      "SPECTF Heart Dataset Analysis Documentation",
+      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+    ],
+    "pandas": [
+      "Risk Awareness Infogram",
+      "SPECTF Heart Dataset Analysis Documentation"
+    ],
+    "streamlit": [
+      "Risk Awareness Infogram"
+    ],
+    "numpy": [
+      "Risk Awareness Infogram",
+      "SPECTF Heart Dataset Analysis Documentation"
+    ],
+    "Scrapy": [
+      "Certificate and Product Scraper EccoVerde"
+    ],
+    "Tkinter": [
+      "TicTacToe Tkinter"
+    ],
+    "scikit-learn": [
+      "SPECTF Heart Dataset Analysis Documentation"
+    ],
+    "matplotlib": [
+      "SPECTF Heart Dataset Analysis Documentation"
+    ],
+    "seaborn": [
+      "SPECTF Heart Dataset Analysis Documentation"
+    ],
+    "Jupyter Notebook": [
+      "SPECTF Heart Dataset Analysis Documentation"
+    ],
+    "R": [
+      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+    ],
+    "Item Response Theory": [
+      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+    ],
+    "Linear Regression": [
+      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+    ],
+    "Multiple Regression Analysis": [
+      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+    ]
+  },
+  "contributors": {
+    "Me": [
+      "Networking Infrastructure Design for Koitalel arap Samoei University College",
+      "Risk Awareness Infogram",
+      "Romanian Cities Pathfinding Using DFS",
+      "Certificate and Product Scraper EccoVerde",
+      "TicTacToe Tkinter",
+      "SPECTF Heart Dataset Analysis Documentation"
+    ],
+    "Purity": [
+      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+    ],
+    "Sade": [
+      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+    ],
+    "Millicent": [
+      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+    ],
+    "Don": [
+      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+    ],
+    "Abhilash Mishra": [
+      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+    ],
+    "Andrew Kimani": [
+      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+    ],
+    "Essosolim Apollinaire Abi": [
+      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+    ]
+  }
+}

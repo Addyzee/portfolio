@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import { GitHubRepo } from "../resources/Interfaces";
-import {getRepos} from "../resources/GitHubInfo";
+import { getRepos } from "../resources/GitHubInfo";
 
-interface NavProps{
-  changeNav:  (name : string) => void
+interface NavProps {
+  changeNav: (name: string) => void;
 }
 
-
-const SideNav = ({changeNav}:NavProps) => {
+const SideNav = ({ changeNav }: NavProps) => {
   const [currentRepo, setCurrentRepo] = useState<string>("");
 
   const [repos, setRepos] = useState<GitHubRepo[]>([]);
@@ -22,10 +21,13 @@ const SideNav = ({changeNav}:NavProps) => {
     };
     fetchRepos();
   }, []);
- 
-  const onClickRepo = (name : string): (() => void) => () => {
-    setCurrentRepo(name) 
-    return changeNav(name)}
+
+  const onClickRepo =
+    (name: string): (() => void) =>
+    () => {
+      setCurrentRepo(name);
+      return changeNav(name);
+    };
 
   return (
     <div className="side-nav">
@@ -33,15 +35,20 @@ const SideNav = ({changeNav}:NavProps) => {
         <h2>Projects</h2>
         {repos.length != 0 ? (
           <ul>
-          {repos.map((repo, index) => (
-            <li key={index}>
-              <button className={`${currentRepo === repo.name ? "active-repo":  "inactive-repo"}`} onClick={onClickRepo(repo.name)}>
-                {repo.name}
-              </button>
-            </li>
-          ))}
+            {repos.map((repo, index) => (
+              <li key={index}>
+                <button
+                  className={`${
+                    currentRepo === repo.name ? "current-repo" : "repo"
+                  }`}
+                  onClick={onClickRepo(repo.name)}
+                >
+                  {repo.name}
+                </button>
+              </li>
+            ))}
           </ul>
-          ) : (
+        ) : (
           <p>Loading...</p>
         )}
       </div>
