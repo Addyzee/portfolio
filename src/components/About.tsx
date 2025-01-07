@@ -1,5 +1,4 @@
 import ProfilePhoto from "../assets/profile-photo.jpg";
-import reposInfo from "../resources/reposInfo.json";
 import {
   GitHubThumbnail,
   LinkedInThumbnail,
@@ -34,14 +33,6 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div>
-        {reposInfo.map((repo, index) => (
-          <div key={index}>
-            <h2>{repo.project_name}</h2>
-            <p>{repo.keywords}</p>
-          </div>
-        ))}
       </div>
     </div>
   );

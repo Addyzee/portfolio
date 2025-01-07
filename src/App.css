@@ -32,6 +32,15 @@ blockquote{
 .side-nav-content{
   @apply h-[80%] flex-col max-w-[90%];
 }
+.side-nav button{
+  @apply text-left
+}
+.active-repo{
+  @apply font-bold text-base
+}
+.inactive-repo{
+  @apply hover:font-bold text-sm
+}
 
 /* Main section */
 .main-section{

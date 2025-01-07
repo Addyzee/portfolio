@@ -8,6 +8,8 @@ interface NavProps{
 
 
 const SideNav = ({changeNav}:NavProps) => {
+  const [currentRepo, setCurrentRepo] = useState<string>("");
+
   const [repos, setRepos] = useState<GitHubRepo[]>([]);
   useEffect(() => {
     const fetchRepos = async () => {
@@ -21,7 +23,9 @@ const SideNav = ({changeNav}:NavProps) => {
     fetchRepos();
   }, []);
  
-  const onClickRepo = (name : string): (() => void) => () => changeNav(name)
+  const onClickRepo = (name : string): (() => void) => () => {
+    setCurrentRepo(name) 
+    return changeNav(name)}
 
   return (
     <div className="side-nav">
@@ -31,7 +35,7 @@ const SideNav = ({changeNav}:NavProps) => {
           <ul>
           {repos.map((repo, index) => (
             <li key={index}>
-              <button className="text-left hover:font-bold text-sm" onClick={onClickRepo(repo.name)}>
+              <button className={`${currentRepo === repo.name ? "active-repo":  "inactive-repo"}`} onClick={onClickRepo(repo.name)}>
                 {repo.name}
               </button>
             </li>
