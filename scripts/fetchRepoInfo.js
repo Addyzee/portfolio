@@ -31,7 +31,6 @@ const __dirname = import.meta.dirname;
 
     const outputPath = path.join(__dirname, '../src/resources/reposInfo.json');
     fs.writeFileSync(outputPath, JSON.stringify(validResults, null, 2));
-    console.log(`Repo info ${outputPath}`);
     let [lookup, lookupOutputPath] = reformatReposInfo(validResults);
     fs.writeFileSync(lookupOutputPath, JSON.stringify(lookup, null, 2));
   } catch (err) {
@@ -46,10 +45,11 @@ const reformatReposInfo = (repos) => {
     keywords: {},
     "languages/tools": {},
     contributors: {},
+    category: {},
   };
 
   repos.forEach((repo) => {
-    const { project_name, year, status, keywords, "languages/tools": tools, contributors } = repo;
+    const { project_name, year, status, category, keywords, "languages/tools": tools, contributors, repo: repo_name} = repo;
 
     // Helper function to add to the object
     const addToCategory = (category, key, project) => {
@@ -61,22 +61,24 @@ const reformatReposInfo = (repos) => {
 
 
     // Add to year
-    addToCategory("year", year, project_name);
+    addToCategory("year", year, repo_name);
 
     // Add to status
-    addToCategory("status", status, project_name);
+    addToCategory("status", status, repo_name);
+
+    addToCategory("category", category, repo_name);
 
     // Add to keywords
-    keywords.forEach((keyword) => addToCategory("keywords", keyword, project_name));
+    keywords.forEach((keyword) => addToCategory("keywords", keyword, repo_name));
 
     // Add to languages/tools
     const toolsArray = Array.isArray(tools) ? tools : [tools];
-    toolsArray.forEach((tool) => addToCategory("languages/tools", tool, project_name));
+    toolsArray.forEach((tool) => addToCategory("languages/tools", tool, repo_name));
 
     // Add to contributors
     const contributorsArray = Array.isArray(contributors) ? contributors : [contributors];
     contributorsArray.forEach((contributor) =>
-      addToCategory("contributors", contributor, project_name)
+      addToCategory("contributors", contributor, repo_name)
     );
   });
   const outputPath = path.join(__dirname, "../src/resources/reposInfoLookup.json");

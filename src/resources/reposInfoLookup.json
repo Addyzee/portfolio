@@ -1,232 +1,251 @@
 {
   "year": {
     "2023": [
-      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+      "CogSkills-SelfLearn"
     ],
     "2024": [
-      "Networking Infrastructure Design for Koitalel arap Samoei University College",
-      "Risk Awareness Infogram",
-      "Romanian Cities Pathfinding Using DFS",
-      "Certificate and Product Scraper EccoVerde",
-      "TicTacToe Tkinter",
-      "SPECTF Heart Dataset Analysis Documentation"
+      "campus-network",
+      "risk-awareness-streamlit",
+      "romanian-travel",
+      "ecoverde-scrape",
+      "0X",
+      "spectf-dt"
     ]
   },
   "status": {
     "Complete": [
-      "Networking Infrastructure Design for Koitalel arap Samoei University College",
-      "Romanian Cities Pathfinding Using DFS",
-      "Certificate and Product Scraper EccoVerde",
-      "TicTacToe Tkinter",
-      "SPECTF Heart Dataset Analysis Documentation",
-      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
-    ],
-    "completed": [
-      "Risk Awareness Infogram"
+      "campus-network",
+      "risk-awareness-streamlit",
+      "romanian-travel",
+      "ecoverde-scrape",
+      "0X",
+      "spectf-dt",
+      "CogSkills-SelfLearn"
     ]
   },
   "keywords": {
     "Network Design": [
-      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+      "campus-network"
     ],
     "LAN": [
-      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+      "campus-network"
     ],
     "WAN": [
-      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+      "campus-network"
     ],
     "University Networking": [
-      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+      "campus-network"
     ],
     "Routing Protocols": [
-      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+      "campus-network"
     ],
     "IP Addressing": [
-      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+      "campus-network"
     ],
     "data visualization": [
-      "Risk Awareness Infogram"
+      "risk-awareness-streamlit"
     ],
     "web apps": [
-      "Risk Awareness Infogram"
+      "risk-awareness-streamlit"
     ],
     "COVID-19 risk awareness": [
-      "Risk Awareness Infogram"
+      "risk-awareness-streamlit"
     ],
     "interactive dashboards": [
-      "Risk Awareness Infogram"
+      "risk-awareness-streamlit"
     ],
     "Graph Traversal": [
-      "Romanian Cities Pathfinding Using DFS"
+      "romanian-travel"
     ],
     "Depth-First Search": [
-      "Romanian Cities Pathfinding Using DFS"
+      "romanian-travel"
     ],
     "Pathfinding": [
-      "Romanian Cities Pathfinding Using DFS"
+      "romanian-travel"
     ],
     "Algorithm Design": [
-      "Romanian Cities Pathfinding Using DFS"
+      "romanian-travel"
     ],
     "Web Scraping": [
-      "Certificate and Product Scraper EccoVerde"
+      "ecoverde-scrape"
     ],
     "Eco-friendly Products": [
-      "Certificate and Product Scraper EccoVerde"
+      "ecoverde-scrape"
     ],
     "Crawlers/Spiders": [
-      "Certificate and Product Scraper EccoVerde"
+      "ecoverde-scrape"
     ],
     "TicTacToe": [
-      "TicTacToe Tkinter"
+      "0X"
     ],
     "Tkinter": [
-      "TicTacToe Tkinter"
+      "0X"
     ],
     "GUI Application": [
-      "TicTacToe Tkinter"
+      "0X"
     ],
     "Python": [
-      "TicTacToe Tkinter"
+      "0X"
     ],
     "Game Development": [
-      "TicTacToe Tkinter"
+      "0X"
     ],
     "Event-driven Programming": [
-      "TicTacToe Tkinter"
+      "0X"
     ],
     "Machine Learning": [
-      "SPECTF Heart Dataset Analysis Documentation"
+      "spectf-dt"
     ],
     "Decision Trees": [
-      "SPECTF Heart Dataset Analysis Documentation"
+      "spectf-dt"
     ],
     "Cross Validation": [
-      "SPECTF Heart Dataset Analysis Documentation"
+      "spectf-dt"
     ],
     "Medical Diagnosis": [
-      "SPECTF Heart Dataset Analysis Documentation"
+      "spectf-dt"
     ],
     "SPECT Imaging": [
-      "SPECTF Heart Dataset Analysis Documentation"
+      "spectf-dt"
     ],
     "Heart Disease": [
-      "SPECTF Heart Dataset Analysis Documentation"
+      "spectf-dt"
     ],
     "Classification": [
-      "SPECTF Heart Dataset Analysis Documentation"
+      "spectf-dt"
     ],
     "Model Evaluation": [
-      "SPECTF Heart Dataset Analysis Documentation"
+      "spectf-dt"
     ],
     "Learning Curves": [
-      "SPECTF Heart Dataset Analysis Documentation"
+      "spectf-dt"
     ],
     "Hyperparameter Optimization": [
-      "SPECTF Heart Dataset Analysis Documentation"
+      "spectf-dt"
     ],
     "Cognitive Skills": [
-      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+      "CogSkills-SelfLearn"
     ],
     "Learnability": [
-      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+      "CogSkills-SelfLearn"
     ],
     "Educational Assessment": [
-      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+      "CogSkills-SelfLearn"
     ],
     "Learning Analytics": [
-      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+      "CogSkills-SelfLearn"
     ],
     "IQ Testing": [
-      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+      "CogSkills-SelfLearn"
     ],
     "Educational Technology": [
-      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+      "CogSkills-SelfLearn"
     ]
   },
   "languages/tools": {
     "Cisco Packet Tracer": [
-      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+      "campus-network"
     ],
     "Python": [
-      "Risk Awareness Infogram",
-      "Romanian Cities Pathfinding Using DFS",
-      "Certificate and Product Scraper EccoVerde",
-      "TicTacToe Tkinter",
-      "SPECTF Heart Dataset Analysis Documentation",
-      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+      "risk-awareness-streamlit",
+      "romanian-travel",
+      "ecoverde-scrape",
+      "0X",
+      "spectf-dt",
+      "CogSkills-SelfLearn"
     ],
     "pandas": [
-      "Risk Awareness Infogram",
-      "SPECTF Heart Dataset Analysis Documentation"
+      "risk-awareness-streamlit",
+      "spectf-dt"
     ],
     "streamlit": [
-      "Risk Awareness Infogram"
+      "risk-awareness-streamlit"
     ],
     "numpy": [
-      "Risk Awareness Infogram",
-      "SPECTF Heart Dataset Analysis Documentation"
+      "risk-awareness-streamlit",
+      "spectf-dt"
     ],
     "Scrapy": [
-      "Certificate and Product Scraper EccoVerde"
+      "ecoverde-scrape"
     ],
     "Tkinter": [
-      "TicTacToe Tkinter"
+      "0X"
     ],
     "scikit-learn": [
-      "SPECTF Heart Dataset Analysis Documentation"
+      "spectf-dt"
     ],
     "matplotlib": [
-      "SPECTF Heart Dataset Analysis Documentation"
+      "spectf-dt"
     ],
     "seaborn": [
-      "SPECTF Heart Dataset Analysis Documentation"
+      "spectf-dt"
     ],
     "Jupyter Notebook": [
-      "SPECTF Heart Dataset Analysis Documentation"
+      "spectf-dt"
     ],
     "R": [
-      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+      "CogSkills-SelfLearn"
     ],
     "Item Response Theory": [
-      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+      "CogSkills-SelfLearn"
     ],
     "Linear Regression": [
-      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+      "CogSkills-SelfLearn"
     ],
     "Multiple Regression Analysis": [
-      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+      "CogSkills-SelfLearn"
     ]
   },
   "contributors": {
     "Me": [
-      "Networking Infrastructure Design for Koitalel arap Samoei University College",
-      "Risk Awareness Infogram",
-      "Romanian Cities Pathfinding Using DFS",
-      "Certificate and Product Scraper EccoVerde",
-      "TicTacToe Tkinter",
-      "SPECTF Heart Dataset Analysis Documentation"
+      "campus-network",
+      "risk-awareness-streamlit",
+      "romanian-travel",
+      "ecoverde-scrape",
+      "0X",
+      "spectf-dt"
     ],
     "Purity": [
-      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+      "campus-network"
     ],
     "Sade": [
-      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+      "campus-network"
     ],
     "Millicent": [
-      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+      "campus-network"
     ],
     "Don": [
-      "Networking Infrastructure Design for Koitalel arap Samoei University College"
+      "campus-network"
     ],
     "Abhilash Mishra": [
-      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+      "CogSkills-SelfLearn"
     ],
     "Andrew Kimani": [
-      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+      "CogSkills-SelfLearn"
     ],
     "Essosolim Apollinaire Abi": [
-      "Measuring General Intelligence: Learnability vs Cognitive Skills Study"
+      "CogSkills-SelfLearn"
+    ]
+  },
+  "category": {
+    "Network Design": [
+      "campus-network"
+    ],
+    "Data visualization": [
+      "risk-awareness-streamlit"
+    ],
+    "Algorithm design": [
+      "romanian-travel"
+    ],
+    "Web Scraping": [
+      "ecoverde-scrape"
+    ],
+    "Gaming": [
+      "0X"
+    ],
+    "Machine Learning": [
+      "spectf-dt",
+      "CogSkills-SelfLearn"
     ]
   }
 }
