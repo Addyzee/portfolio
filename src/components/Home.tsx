@@ -1,19 +1,15 @@
-import reposInfo from "../resources/reposInfo.json";
-
+// import reposLookup from "../resources/reposInfoLookup.json";
+import FilterSection from "./FilterSection";
 const Home = () => {
-  
   return (
-    <div>Home
-       <div>
-        {reposInfo.length}
-        {reposInfo.map((repo, index) => (
-          <div key={index}>
-            <p>{repo.project_name} : {repo.keywords} </p>
-          </div>
-        ))}
+    <div className="h-[100%] p-5 border overflow-y-hidden">
+      <div className="h-[70%] flex items-center justify-center overflow-y-hidden">
+        <div className="h-[10%]">
+          <FilterSection></FilterSection>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Home;

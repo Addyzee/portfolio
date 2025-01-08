@@ -2,14 +2,15 @@ import { useEffect, useState } from "react";
 import { GitHubRepo } from "../resources/Interfaces";
 import { getRepos } from "../resources/GitHubInfo";
 
+
 interface NavProps {
   changeNav: (name: string) => void;
 }
 
 const SideNav = ({ changeNav }: NavProps) => {
   const [currentRepo, setCurrentRepo] = useState<string>("");
-
   const [repos, setRepos] = useState<GitHubRepo[]>([]);
+
   useEffect(() => {
     const fetchRepos = async () => {
       try {
