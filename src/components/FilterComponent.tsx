@@ -36,7 +36,9 @@ const FilterComponent = ({
 
   const filterCategory =
     filterItem.charAt(0).toUpperCase() + filterItem.slice(1);
-  const filterChoicesList = Object.keys(filterChoices).sort();
+  const filterChoicesList = Object.keys(filterChoices);
+  filterChoicesList.splice(0,0,"All");
+  
 
   const filtersLength = filterChoicesList.length;
   const [filterCheck, setFilterCheck] = useState<boolean[]>(
@@ -46,33 +48,54 @@ const FilterComponent = ({
   const [currentRepos, setCurrentRepos] = useState<string[]>(
     (Object.values(Repos[filterItem]).flat() as string[]).sort()
   );
+  const checkAll = (index: number) => {
+    const allChecked = filterCheck[index];
+    setFilterCheck((prev) => prev.map(() => !allChecked));
+    if (!allChecked)
+      setCurrentRepos(
+        (Object.values(Repos[filterItem]).flat() as string[]).sort()
+      );
+    else setCurrentRepos([]);
+    updateContextRepo();
+    console.log(currentRepos);
+  };
 
   const toggleCheck = (index: number) => {
-    setFilterCheck((prev) =>
-      prev.map((value, i) => (i === index ? !value : value))
-    );
-    const chosenCategory = filterChoicesList[index];
-    const affectedRepos = Repos[filterItem][chosenCategory];
+    if (filterChoicesList[index] === "All") checkAll(index);
+    else {
+      const allIndex = filterChoicesList.indexOf("All");
 
-    if (filterCheck[index]) {
-      const indexToRemove: number[] = [];
-      affectedRepos.forEach((value: string) => {
-        indexToRemove.push(currentRepos.indexOf(value));
-      });
-      indexToRemove.sort();
-      for (let i = indexToRemove.length - 1; i >= 0; i--) {
-        setCurrentRepos((prev) => {
-          const updated = [...prev].sort();
-          updated.splice(indexToRemove[i], 1);
-          return updated;
+      setFilterCheck((prev) =>{
+        const newFilterCheck =
+        prev.map((value, i) =>
+          i === allIndex && value ? !value : i === index ? !value : value
+        )
+        newFilterCheck[allIndex] = newFilterCheck.filter(value => !value).length === 1 ? true : false
+        return newFilterCheck
+    });
+      const chosenCategory = filterChoicesList[index];
+      const affectedRepos = Repos[filterItem][chosenCategory];
+
+      if (filterCheck[index]) {
+        const indexToRemove: number[] = [];
+        affectedRepos.forEach((value: string) => {
+          indexToRemove.push(currentRepos.indexOf(value));
+        });
+        indexToRemove.sort();
+        for (let i = indexToRemove.length - 1; i >= 0; i--) {
+          setCurrentRepos((prev) => {
+            const updated = [...prev].sort();
+            updated.splice(indexToRemove[i], 1);
+            return updated;
+          });
+        }
+      } else {
+        affectedRepos.forEach((value: string) => {
+          setCurrentRepos((prev) => [value, ...prev].sort());
         });
       }
-    } else {
-      affectedRepos.forEach((value: string) => {
-        setCurrentRepos((prev) => [value, ...prev].sort());
-      });
+      updateContextRepo();
     }
-    updateContextRepo();
   };
   useEffect(() => {
     setContextRepos(currentRepos);
@@ -98,7 +121,10 @@ const FilterComponent = ({
         className="filter-topic"
         style={{ width: `${dropdownWidth || "auto"}px` }}
       >
-        <p className="text-sm pr-2">{`${filterCategory}: All`}</p>
+        <p className="text-sm pr-2">
+          {`${filterCategory}`}
+          {filterCheck.includes(false) ? `` : `: All`}
+        </p>
         <button onClick={() => toggleFilters(index)}>
           <img
             src={showFilters[index] ? DownArrow : UpArrow}
@@ -108,7 +134,7 @@ const FilterComponent = ({
         </button>
       </div>
       {showFilters[index] && (
-        <div  ref={dropdownRef} className="filter-categories-container">
+        <div ref={dropdownRef} className="filter-categories-container">
           {filterChoicesList.map((choice, idx) => (
             <div className="flex items-center" key={idx}>
               <button onClick={() => toggleCheck(idx)}>
@@ -129,7 +155,6 @@ const FilterComponent = ({
           ))}
         </div>
       )}
-      
     </div>
   );
 };
