@@ -1,4 +1,8 @@
-import { createContext } from "react"
+import { createContext } from "react";
 
-export const ReposContext = createContext<string[] | string>("all")
+interface ReposContextType {
+  contextRepos: string | string[];
+  setContextRepos: React.Dispatch<React.SetStateAction<string | string[]>>;
+}
 
+export const ReposContext = createContext<ReposContextType | undefined>(undefined);

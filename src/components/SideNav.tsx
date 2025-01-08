@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { GitHubRepo } from "../resources/Interfaces";
 import { getRepos } from "../resources/GitHubInfo";
+import { ReposContext } from "../context/reposContext";
 
 
 interface NavProps {
@@ -8,20 +9,31 @@ interface NavProps {
 }
 
 const SideNav = ({ changeNav }: NavProps) => {
+  const reposContext = useContext(ReposContext);
+
+  if (!reposContext) {
+    throw new Error("ChildComponent must be used within a ReposContext.Provider");
+  }
+
+  const { contextRepos } = reposContext;
   const [currentRepo, setCurrentRepo] = useState<string>("");
   const [repos, setRepos] = useState<GitHubRepo[]>([]);
+
+  if (!reposContext) {
+    throw new Error("ChildComponent must be used within a ReposContext.Provider");
+  }
 
   useEffect(() => {
     const fetchRepos = async () => {
       try {
         const repoList: GitHubRepo[] = await getRepos();
-        setRepos(repoList);
+        setRepos(contextRepos === "all" ? repoList : repoList.filter((repo) => contextRepos.includes(repo.name)))
       } catch (error) {
         console.error("Failed to fetch repositories:", error);
       }
     };
     fetchRepos();
-  }, []);
+  }, [contextRepos]);
 
   const onClickRepo =
     (name: string): (() => void) =>

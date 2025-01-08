@@ -6,14 +6,14 @@ import { ReposContext } from "./context/reposContext";
 
 function App() {
   const [currentState, setCurrentState] = useState<string>("Home");
-  const [currentRepos ] = useState<string | string[]>("all")
+  const [contextRepos, setContextRepos ] = useState<string | string[]>("all")
   const changeState = (name: string) => {
     setCurrentState(name);
   };
 
   return (
     <div className="flex app">
-      <ReposContext.Provider value={currentRepos}>
+      <ReposContext.Provider value={{contextRepos, setContextRepos}}>
         <SideNav changeNav={changeState}></SideNav>
         <Main changeState={changeState} currentState={currentState}></Main>
       </ReposContext.Provider>
