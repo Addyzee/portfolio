@@ -60,7 +60,7 @@ blockquote {
 
 /* Filter Component */
 .filter-topic{
-  @apply flex justify-between border min-w-36 px-2 py-1 mb-2 rounded-md
+  @apply flex justify-between border min-w-36 w-full px-2 py-1 mb-2 rounded-md
 }
 .filter-categories-container{
   @apply min-w-36 py-1 max-h-56 border overflow-y-scroll mt-1

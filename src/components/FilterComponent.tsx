@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import UpArrow from "../assets/up-arrow.svg";
 import DownArrow from "../assets/down-arrow.svg";
 import TickMark from "../assets/tick-mark.svg";
@@ -37,8 +37,7 @@ const FilterComponent = ({
   const filterCategory =
     filterItem.charAt(0).toUpperCase() + filterItem.slice(1);
   const filterChoicesList = Object.keys(filterChoices);
-  filterChoicesList.splice(0,0,"All");
-  
+  filterChoicesList.splice(0, 0, "All");
 
   const filtersLength = filterChoicesList.length;
   const [filterCheck, setFilterCheck] = useState<boolean[]>(
@@ -57,7 +56,6 @@ const FilterComponent = ({
       );
     else setCurrentRepos([]);
     updateContextRepo();
-    console.log(currentRepos);
   };
 
   const toggleCheck = (index: number) => {
@@ -65,14 +63,14 @@ const FilterComponent = ({
     else {
       const allIndex = filterChoicesList.indexOf("All");
 
-      setFilterCheck((prev) =>{
-        const newFilterCheck =
-        prev.map((value, i) =>
+      setFilterCheck((prev) => {
+        const newFilterCheck = prev.map((value, i) =>
           i === allIndex && value ? !value : i === index ? !value : value
-        )
-        newFilterCheck[allIndex] = newFilterCheck.filter(value => !value).length === 1 ? true : false
-        return newFilterCheck
-    });
+        );
+        newFilterCheck[allIndex] =
+          newFilterCheck.filter((value) => !value).length === 1 ? true : false;
+        return newFilterCheck;
+      });
       const chosenCategory = filterChoicesList[index];
       const affectedRepos = Repos[filterItem][chosenCategory];
 
@@ -101,43 +99,28 @@ const FilterComponent = ({
     setContextRepos(currentRepos);
   }, [currentRepos, setContextRepos]);
 
-  const [dropdownWidth, setDropdownWidth] = useState<number>(0);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (showFilters[index] && dropdownRef.current) {
-      const maxWidth = Math.max(
-        ...Array.from(dropdownRef.current.children).map(
-          (child: Element) => (child as HTMLElement).offsetWidth
-        )
-      );
-      setDropdownWidth(maxWidth + 10);
-    }
-  }, [filterChoicesList, showFilters, index]);
-
   return (
     <div>
-      <div
-        className="filter-topic"
-        style={{ width: `${dropdownWidth || "auto"}px` }}
-      >
-        <p className="text-md pr-2">
-          {`${filterCategory}`}
-          {filterCheck.includes(false) ? `` : `: All`}
-        </p>
-        <button onClick={() => toggleFilters(index)}>
+      <button className="mr-2 w-full" onClick={() => toggleFilters(index)}>
+        <div className="filter-topic">
+          <p className="text-md pr-2">
+            {`${filterCategory}`}
+            {filterCheck.includes(false) ? `` : `: All`}
+          </p>
           <img
             src={showFilters[index] ? DownArrow : UpArrow}
             className="border-0"
             alt=""
           />
-        </button>
-      </div>
+        </div>
+      </button>
+
       {showFilters[index] && (
-        <div ref={dropdownRef} className="filter-categories-container">
+        <div className="filter-categories-container ">
           {filterChoicesList.map((choice, idx) => (
-            <div className="flex items-center hover:bg-slate-200" key={idx}>
-              <button onClick={() => toggleCheck(idx)}>
+            <div className="">
+            <button className="w-full" onClick={() => toggleCheck(idx)}>
+              <div className="flex items-center hover:bg-slate-200" key={idx}>
                 <div className="filter-tick-mark">
                   {filterCheck[idx] && (
                     <img
@@ -147,10 +130,11 @@ const FilterComponent = ({
                     />
                   )}
                 </div>
-              </button>
-              <div>
-                <p>{choice}</p>
+                <div>
+                  <p>{choice}</p>
+                </div>
               </div>
+            </button>
             </div>
           ))}
         </div>

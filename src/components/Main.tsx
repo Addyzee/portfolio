@@ -12,13 +12,18 @@ const Main = ({ changeState, currentState }: MainProps) => {
   return (
     <div className="main-section h-[100%]">
       <div className="header-nav-container">
-        <HeaderNav currentState = {currentState} changeNav={changeState}></HeaderNav>
+        <HeaderNav
+          currentState={currentState}
+          changeNav={changeState}
+        ></HeaderNav>
       </div>
       <div className="main-content w-screen pl-3 ">
         {currentState === "About" ? (
-            <About></About>
+          <About></About>
         ) : currentState === "Projects" ? (
-          <SideNav changeNav={changeState}></SideNav>
+          <div className="md:hidde h-full">
+            <SideNav changeNav={changeState}></SideNav>
+          </div>
         ) : (
           <Project currentRepo={currentState}></Project>
         )}
