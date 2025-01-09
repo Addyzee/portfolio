@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { GitHubRepo } from "../resources/Interfaces";
 import { getRepos } from "../resources/GitHubInfo";
 import { ReposContext } from "../context/reposContext";
-
+import FilterSection from "./FilterSection";
 
 interface NavProps {
   changeNav: (name: string) => void;
@@ -12,7 +12,9 @@ const SideNav = ({ changeNav }: NavProps) => {
   const reposContext = useContext(ReposContext);
 
   if (!reposContext) {
-    throw new Error("ChildComponent must be used within a ReposContext.Provider");
+    throw new Error(
+      "ChildComponent must be used within a ReposContext.Provider"
+    );
   }
 
   const { contextRepos } = reposContext;
@@ -20,14 +22,20 @@ const SideNav = ({ changeNav }: NavProps) => {
   const [repos, setRepos] = useState<GitHubRepo[]>([]);
 
   if (!reposContext) {
-    throw new Error("ChildComponent must be used within a ReposContext.Provider");
+    throw new Error(
+      "ChildComponent must be used within a ReposContext.Provider"
+    );
   }
 
   useEffect(() => {
     const fetchRepos = async () => {
       try {
         const repoList: GitHubRepo[] = await getRepos();
-        setRepos(contextRepos === "all" ? repoList : repoList.filter((repo) => contextRepos.includes(repo.name)))
+        setRepos(
+          contextRepos === "all"
+            ? repoList
+            : repoList.filter((repo) => contextRepos.includes(repo.name))
+        );
       } catch (error) {
         console.error("Failed to fetch repositories:", error);
       }
@@ -64,6 +72,10 @@ const SideNav = ({ changeNav }: NavProps) => {
         ) : (
           <p>Loading...</p>
         )}
+      </div>
+      <div>
+        <h2>Filters</h2>
+        <FilterSection></FilterSection>
       </div>
     </div>
   );

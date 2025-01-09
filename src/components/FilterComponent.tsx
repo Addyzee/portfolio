@@ -121,7 +121,7 @@ const FilterComponent = ({
         className="filter-topic"
         style={{ width: `${dropdownWidth || "auto"}px` }}
       >
-        <p className="text-sm pr-2">
+        <p className="text-md pr-2">
           {`${filterCategory}`}
           {filterCheck.includes(false) ? `` : `: All`}
         </p>
@@ -136,7 +136,7 @@ const FilterComponent = ({
       {showFilters[index] && (
         <div ref={dropdownRef} className="filter-categories-container">
           {filterChoicesList.map((choice, idx) => (
-            <div className="flex items-center" key={idx}>
+            <div className="flex items-center hover:bg-slate-200" key={idx}>
               <button onClick={() => toggleCheck(idx)}>
                 <div className="filter-tick-mark">
                   {filterCheck[idx] && (

@@ -1,24 +1,24 @@
 import HeaderNav from "./HeaderNav";
 import Project from "./Project";
 import About from "./About";
-import Home from "./Home";
+import SideNav from "./SideNav";
 
 interface MainProps {
-  changeState:  (name : string) => void
-  currentState: null | string;
+  changeState: (name: string) => void;
+  currentState: string;
 }
 
 const Main = ({ changeState, currentState }: MainProps) => {
   return (
-    <div className="main-section">
+    <div className="main-section h-[100%]">
       <div className="header-nav-container">
-        <HeaderNav changeNav={changeState}></HeaderNav>
+        <HeaderNav currentState = {currentState} changeNav={changeState}></HeaderNav>
       </div>
-      <div className="main-content">
+      <div className="main-content w-screen pl-3 ">
         {currentState === "About" ? (
-          <About></About>
-        ) : currentState === "Home" ? (
-          <Home></Home>
+            <About></About>
+        ) : currentState === "Projects" ? (
+          <SideNav changeNav={changeState}></SideNav>
         ) : (
           <Project currentRepo={currentState}></Project>
         )}

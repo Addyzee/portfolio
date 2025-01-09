@@ -15,7 +15,7 @@ const FilterSection = () => {
   };
 
   return (
-    <div className="flex gap-10 justify-center pt-2">
+    <div className="flex-col gap-10 justify-center pt-2">
       {Object.entries(reposLookup).map(
         ([filter, filterChoices], index) =>
           filtersToInclude.includes(filter) && (

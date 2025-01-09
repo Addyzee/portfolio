@@ -6,11 +6,9 @@ import {
 } from "./Thumbnails";
 const About = () => {
   return (
-    <div className="h-[90%]">
-      About
-      <div className="flex items-center h-[90%] ml-20 mr-20">
-        <div className="flex">
-          <div className="min-w-[40%]">
+      <div className="flex justify-center items-center h-[90%]">
+        <div className="md:flex md:justify-center">
+          <div className="min-w-[40%] flex justify-center pb-5">
             <img
               src={ProfilePhoto}
               alt=""
@@ -19,13 +17,13 @@ const About = () => {
               className="rounded-full "
             />
           </div>
-          <div className="flex min-h-[40%] min-w-[40%] items-center pl-8">
+          <div className="flex min-h-[40%] min-w-[40%] items-center">
             <div className="flex-col gap-4">
-              <p>
+              <p className="text-center md:text-base lg:text-lg"> 
                 Hi. My name is Andrew. I’m using this site to showcase some cool
                 projects I’ve done. Reach out on the links below.
               </p>
-              <div className="flex gap-3">
+              <div className="flex gap-3 border-y-2 justify-center">
                 <GitHubThumbnail></GitHubThumbnail>
                 <LinkedInThumbnail></LinkedInThumbnail>
                 <GMailThumbnail></GMailThumbnail>
@@ -34,7 +32,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
