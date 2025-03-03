@@ -70,12 +70,12 @@ const SideNav = ({ changeNav }: NavProps) => {
             ))}
           </ul>
         ) : (
-          <p>Loading...</p>
+          <p>No projects available...</p>
         )}
       </div>
       <div>
-        <h2>Filters</h2>
-        <FilterSection></FilterSection>
+        {/* <h2>Filters</h2> */}
+        {/* <FilterSection></FilterSection> */}
       </div>
     </div>
   );

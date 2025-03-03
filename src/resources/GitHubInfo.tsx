@@ -7,13 +7,7 @@ const apiURL = `https://api.github.com/users/addyzee/repos`;
 const branchURL = `refs/heads/master`;
 const docsLocation = `PROJECT/DOCS`;
 const reposToInclude = [
-  "campus-network",
-  "risk-awareness-streamlit",
-  "romanian-travel",
-  "ecoverde-scrape",
-  "0X",
-  "spectf-dt",
-  "CogSkills-SelfLearn",
+""
 ];
 
 export const getRepos = async (): Promise<GitHubRepo[]> => {
