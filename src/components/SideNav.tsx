@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { GitHubRepo } from "../resources/Interfaces";
 import { getRepos } from "../resources/GitHubInfo";
 import { ReposContext } from "../context/reposContext";
-import FilterSection from "./FilterSection";
+// import FilterSection from "./FilterSection";
 
 interface NavProps {
   changeNav: (name: string) => void;
